@@ -194,9 +194,9 @@ export default function AdminPage() {
   // If initial auth check is running
   if (loading || isAuthenticated === null) {
     return (
-      <div className="min-h-screen bg-[#080C14] flex items-center justify-center">
-        <div className="flex flex-col items-center gap-3 text-slate-400">
-          <Loader2 className="w-8 h-8 animate-spin text-indigo-500" />
+      <div className="min-h-screen bg-[#F8FAFD] dark:bg-[#080C14] flex items-center justify-center">
+        <div className="flex flex-col items-center gap-3 text-slate-500 dark:text-slate-400">
+          <Loader2 className="w-8 h-8 animate-spin text-blue-600 dark:text-indigo-500" />
           <span className="text-sm">Verifying administrator authorization...</span>
         </div>
       </div>
@@ -209,7 +209,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#080C14] text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-[#F8FAFD] dark:bg-[#080C14] text-slate-800 dark:text-slate-100 flex flex-col transition-colors duration-200">
       {/* Header */}
       <AdminHeader
         adminEmail={adminEmail}

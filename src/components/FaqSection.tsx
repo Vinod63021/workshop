@@ -38,17 +38,17 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#080C14] relative">
+    <section id="faq" className="py-24 bg-[#F8FAFD] dark:bg-[#080C14] relative transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold">
-            <HelpCircle className="w-3.5 h-3.5 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F0FE] dark:bg-slate-900 border border-[#C2E7FF] dark:border-slate-800 text-[#1A73E8] dark:text-slate-300 text-xs font-semibold shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-[#1A73E8] dark:text-blue-400" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-600 dark:text-slate-400 text-sm">
             Everything you need to know about the 60-Minute BuildSprint AI workshop.
           </p>
         </div>
@@ -59,21 +59,21 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-[#0B0F19]/90 border border-white/5 overflow-hidden transition-all hover:border-white/10"
+                className="rounded-2xl bg-white dark:bg-[#0B0F19]/90 border border-slate-200/90 dark:border-white/5 overflow-hidden transition-all hover:border-blue-300 dark:hover:border-white/10 shadow-sm"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-white hover:text-cyan-300 transition-colors cursor-pointer"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-300 transition-colors cursor-pointer"
                 >
                   <span>{item.q}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0" />
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <div className="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-3">
                     {item.a}
                   </div>
                 )}

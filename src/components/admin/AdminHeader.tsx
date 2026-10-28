@@ -11,6 +11,7 @@ import {
   Sparkles,
   Info,
 } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 interface AdminHeaderProps {
   adminEmail?: string;
@@ -111,7 +112,9 @@ export default function AdminHeader({
               <span className="hidden sm:inline">Database Config</span>
             </button>
 
-            <div className="h-6 w-px bg-slate-800 hidden sm:block" />
+            <ThemeToggle />
+
+            <div className="h-6 w-px bg-slate-300 dark:bg-slate-800 hidden sm:block" />
 
             {adminEmail && (
               <span className="text-xs text-slate-400 hidden md:block">
