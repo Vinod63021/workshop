@@ -4,18 +4,10 @@ services:
     runtime: node
     plan: free
     region: oregon
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npx next start -p $PORT
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
       - key: NODE_ENV
         value: production
-      # Optional: Add Supabase credentials in Render dashboard if using persistent DB
-      # - key: NEXT_PUBLIC_SUPABASE_URL
-      #   sync: false
-      # - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
-      #   sync: false
-      # - key: SUPABASE_SERVICE_ROLE_KEY
-      #   sync: false
-
