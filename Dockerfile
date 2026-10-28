@@ -13,12 +13,14 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # Step 3: Production runner
 FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 
 RUN addgroup --system --gid 1001 nodejs
@@ -33,5 +35,4 @@ USER nextjs
 
 EXPOSE 3000
 
-CMD ["npx", "next", "start", "-p", "3000"]
-
+CMD ["npx", "next", "start", "-H", "0.0.0.0", "-p", "3000"]
