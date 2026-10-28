@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 const FAQS = [
   {
     q: 'Who is eligible to participate in this workshop?',
-    a: 'This workshop is specifically designed for final-year engineering students (Graduating 2025/2026) across computer science, IT, electronics, electrical, mechanical, and civil engineering branches who want to add an AI project to their technical portfolio.',
+    a: 'This workshop is specifically designed for final-year engineering students (Graduating 2025/2026) across computer science, IT, electronics, electrical, mechanical, and civil branches who want to build and deploy an AI micro-app to their technical portfolio.',
   },
   {
     q: 'Do I need prior experience in Machine Learning or Artificial Intelligence?',
@@ -38,14 +38,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#080C14] relative">
+    <section id="faq" className="py-24 bg-[#080C14] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold">
-            <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold">
+            <HelpCircle className="w-3.5 h-3.5 text-blue-400" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-400 text-sm">
@@ -59,21 +59,21 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-xl bg-[#0B0F19] border border-slate-800/80 overflow-hidden transition-colors"
+                className="rounded-2xl bg-[#0B0F19]/90 border border-white/5 overflow-hidden transition-all hover:border-white/10"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-white hover:text-indigo-300 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-sm font-semibold text-white hover:text-cyan-300 transition-colors cursor-pointer"
                 >
                   <span>{item.q}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-cyan-400 shrink-0" />
                   ) : (
                     <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/40 pt-3">
+                  <div className="px-6 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
                     {item.a}
                   </div>
                 )}
@@ -85,4 +85,3 @@ export default function FaqSection() {
     </section>
   );
 }
-

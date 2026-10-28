@@ -68,13 +68,13 @@ export default function AdminHeader({
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand & Portal Title */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="h-8 p-1 rounded-lg bg-white flex items-center justify-center shadow-md">
+              <img src="/nxtwave-logo.png" alt="NxtWave" className="h-full w-auto object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                  BuildSprint AI Admin
+                  BuildSprint <span className="text-cyan-400">AI</span> Admin
                 </h1>
                 <span
                   className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${

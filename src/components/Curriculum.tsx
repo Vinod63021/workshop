@@ -5,157 +5,143 @@ import {
   BrainCircuit,
   Binary,
   Layers,
-  Workflow,
-  CheckCircle,
-  HelpCircle,
-  Award,
+  Rocket,
+  CheckCircle2,
   Calendar,
-  UserCheck,
+  Sparkles,
+  Shield,
 } from 'lucide-react';
 
-const OUTCOMES = [
+const HIGHLIGHTS = [
   {
     icon: BrainCircuit,
-    title: 'Modern LLM API Integration',
-    desc: 'Understand tokens, streaming endpoints, system prompts, and temperature parameters without mathematical overload.',
+    title: 'Streaming LLMs',
+    desc: 'Tokens, endpoints, and latency management without complex calculus.',
   },
   {
     icon: Binary,
-    title: 'Deterministic Structured Output',
-    desc: 'Force AI models to reliably respond in validated JSON/schemas so your web frontend never crashes from unexpected text.',
+    title: 'Structured Output',
+    desc: 'Enforce validated JSON outputs so your UI never breaks on unexpected text.',
   },
   {
     icon: Layers,
-    title: 'Full-Stack Reactive UI Architecture',
-    desc: 'Wire up asynchronous state, real-time typing effect, loading spinners, and error boundaries in Next.js.',
+    title: 'Reactive Full-Stack UI',
+    desc: 'Next.js server actions, loading skeletons, and real-time typing indicators.',
   },
   {
-    icon: Workflow,
-    title: 'Instant Cloud Deployment',
-    desc: 'Ship your working AI project to a live public URL on Vercel with HTTPS and mobile responsiveness.',
+    icon: Rocket,
+    title: 'Instant Cloud Deploy',
+    desc: 'Deploy live on the web with a public HTTPS link ready for your GitHub & CV.',
   },
 ];
 
 export default function Curriculum() {
   return (
-    <section id="outcomes" className="py-20 bg-[#06090F] relative border-t border-slate-900">
+    <section id="outcomes" className="py-24 bg-[#060A11] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Learning Outcomes */}
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left: 4 Bento Cards */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-950/60 border border-violet-500/30 text-violet-300 text-xs font-semibold">
-              <CheckCircle className="w-3.5 h-3.5" />
-              <span>Skill-First Engineering Curriculum</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Real Engineering Skills</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              Real engineering outcomes.
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300">
-                Zero theoretical fluff.
-              </span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+              Practical abilities you keep forever.
             </h2>
 
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              Most online tutorials take weeks. We distill the core production pattern of AI engineering
-              into 60 minutes so you have tangible code running on your machine by the end of the hour.
+              Most tutorials get stuck in theory. We jump straight to production patterns used by modern AI engineering teams.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {OUTCOMES.map((o, idx) => {
-                const Icon = o.icon;
+              {HIGHLIGHTS.map((item, idx) => {
+                const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/30 transition-all space-y-2.5"
+                    className="p-5 rounded-2xl bg-[#090E17]/80 border border-white/5 hover:border-blue-500/30 transition-all space-y-2.5"
                   >
-                    <div className="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-                      <Icon className="w-4 h-4" />
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-cyan-300">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-sm font-semibold text-white">{o.title}</h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">{o.desc}</p>
+                    <h3 className="text-base font-bold text-white">{item.title}</h3>
+                    <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
                   </div>
                 );
               })}
             </div>
           </div>
 
-          {/* Right Column: Workshop Spec & Configurable Placeholders */}
+          {/* Right: Clean Specifications Card */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-[#0B0F19] border border-indigo-500/30 p-6 sm:p-8 shadow-xl space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div className="rounded-3xl bg-[#090E17]/90 backdrop-blur-2xl border border-white/10 p-7 shadow-2xl space-y-6">
+              
+              <div className="flex items-center justify-between pb-4 border-b border-white/5">
                 <div>
-                  <h3 className="text-lg font-bold text-white">Workshop Specifications</h3>
-                  <p className="text-xs text-slate-400">Build Your First AI Project in 60 Minutes</p>
+                  <h3 className="text-lg font-bold text-white">Workshop Overview</h3>
+                  <p className="text-xs text-slate-400">Build Your First AI Project in 60 Mins</p>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
-                  FREE ENTRY
+                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-black">
+                  FREE
                 </span>
               </div>
 
-              {/* Spec Items */}
-              <div className="space-y-4 text-xs">
-                <div className="flex items-start justify-between py-2 border-b border-slate-800/60">
-                  <span className="text-slate-400">Session Duration</span>
-                  <span className="text-white font-medium">60 Minutes Fast-Paced</span>
+              <div className="space-y-3.5 text-xs">
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-slate-400">Duration</span>
+                  <span className="text-white font-semibold">60 Minutes</span>
                 </div>
-
-                <div className="flex items-start justify-between py-2 border-b border-slate-800/60">
-                  <span className="text-slate-400">Format &amp; Delivery</span>
-                  <span className="text-white font-medium">100% Online (Live Code-Along)</span>
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-slate-400">Format</span>
+                  <span className="text-white font-semibold">100% Online Live Stream</span>
                 </div>
-
-                <div className="flex items-start justify-between py-2 border-b border-slate-800/60">
-                  <span className="text-slate-400">Intended Audience</span>
-                  <span className="text-white font-medium text-right">
-                    Final-Year Engineering Students (CSE, IT, ECE, EEE, Mech, Civil)
-                  </span>
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-slate-400">Target Audience</span>
+                  <span className="text-white font-semibold text-right">Final-Year Engineering Students</span>
                 </div>
-
-                <div className="flex items-start justify-between py-2 border-b border-slate-800/60">
+                <div className="flex justify-between py-1 border-b border-white/5">
                   <span className="text-slate-400">Prerequisites</span>
-                  <span className="text-white font-medium text-right">
-                    Basic programming familiarity (JS/Python/C++); zero AI background required
-                  </span>
+                  <span className="text-white font-semibold text-right">Basic programming logic (any language)</span>
                 </div>
+              </div>
 
-                {/* Honest Configurable Placeholders as required by prompt */}
-                <div className="p-3.5 rounded-xl bg-slate-900/90 border border-amber-500/25 space-y-2.5">
-                  <div className="text-[11px] font-semibold text-amber-300 flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Configurable Event Parameters</span>
-                  </div>
-                  <div className="space-y-1.5 text-[11px] text-slate-300">
-                    <p>
-                      <strong className="text-slate-400">Date &amp; Time:</strong>{' '}
-                      <span className="text-amber-200">[Configurable Placeholder: Announced upon batch lock]</span>
-                    </p>
-                    <p>
-                      <strong className="text-slate-400">Lead Mentor:</strong>{' '}
-                      <span className="text-amber-200">[Configurable Placeholder: Lead AI Engineer, NxtWave Team]</span>
-                    </p>
-                    <p>
-                      <strong className="text-slate-400">Certificate Status:</strong>{' '}
-                      <span className="text-amber-200">[Configurable Placeholder: Attendance verification details provided post-session]</span>
-                    </p>
-                  </div>
-                  <p className="text-[10px] text-slate-500 italic pt-1 border-t border-slate-800">
-                    * Note: Following challenge guidelines, event timing and host details remain configurable placeholders until official schedule confirmation.
-                  </p>
+              {/* Configurable Placeholders Box */}
+              <div className="p-4 rounded-2xl bg-slate-900/80 border border-amber-500/20 text-xs space-y-2 text-slate-300">
+                <div className="text-[11px] font-bold text-amber-300 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Session Logistics</span>
                 </div>
+                <p className="text-[11px]">
+                  <strong className="text-slate-400">Date &amp; Time:</strong>{' '}
+                  <span className="text-amber-200">[Configurable Placeholder: Announced upon registration lock]</span>
+                </p>
+                <p className="text-[11px]">
+                  <strong className="text-slate-400">Mentor:</strong>{' '}
+                  <span className="text-amber-200">[Configurable Placeholder: Senior NxtWave AI Engineers]</span>
+                </p>
+                <p className="text-[11px]">
+                  <strong className="text-slate-400">Verification:</strong>{' '}
+                  <span className="text-amber-200">[Configurable Placeholder: Certificate details confirmed post-session]</span>
+                </p>
               </div>
 
               <a
                 href="#register"
-                className="w-full inline-flex items-center justify-center py-3.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all text-center"
+                className="w-full py-3.5 rounded-full font-bold text-xs text-white bg-blue-600 hover:bg-blue-500 flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/30"
               >
-                Enroll in the Next Sprint
+                <span>Reserve Your Free Seat</span>
               </a>
+
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );
 }
-

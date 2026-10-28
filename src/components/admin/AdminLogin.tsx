@@ -66,12 +66,12 @@ export default function AdminLogin({ onLoginSuccess, mode }: AdminLoginProps) {
 
       <div className="relative w-full max-w-md space-y-8">
         {/* Brand Header */}
-        <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mx-auto shadow-lg shadow-indigo-500/20">
-            <ShieldCheck className="w-7 h-7" />
+        <div className="text-center space-y-3">
+          <div className="inline-flex items-center justify-center p-1.5 rounded-xl bg-white shadow-xl shadow-cyan-500/10 mx-auto">
+            <img src="/nxtwave-logo.png" alt="NxtWave" className="h-9 w-auto object-contain" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            BuildSprint AI Admin
+            BuildSprint <span className="text-cyan-400">AI</span> Admin
           </h2>
           <p className="text-xs text-slate-400">
             Protected Growth Analytics &amp; Student Management Portal
